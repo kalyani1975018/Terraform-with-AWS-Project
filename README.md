@@ -56,5 +56,14 @@ Before deploying, make sure you have:
 - The ALB listens on port 80 and forwards traffic to the target group attached to both web servers.
 - You may need to update the AMI ID in `terraform.tfvars` depending on your AWS region and account.
 
+Output screenshots:
+<img width="1920" height="1080" alt="Screenshot (199)" src="https://github.com/user-attachments/assets/034ad7b6-4d03-4e3c-8424-8b84716d88f4" />
+<img width="1920" height="1080" alt="Screenshot (220)" src="https://github.com/user-attachments/assets/3402de8e-73f5-43c4-9ba6-2fadce841cd1" />
+<img width="1920" height="1080" alt="Screenshot (203)" src="https://github.com/user-attachments/assets/fd204999-db0b-4bdb-9edf-569402fda4fa" />
+<img width="1920" height="1080" alt="Screenshot (204)" src="https://github.com/user-attachments/assets/bd179e33-8e27-480a-b72a-187cf535ed8b" />
+<img width="1920" height="1080" alt="Screenshot (216)" src="https://github.com/user-attachments/assets/491a6dd4-2b08-4a79-9231-ec56a70acb0e" />
+<img width="1920" height="1080" alt="Screenshot (223)" src="https://github.com/user-attachments/assets/6f0e3c81-a410-4d86-a8d4-535e7afc9194" />
+
+
 
 
