@@ -1,0 +1,60 @@
+# Terraform AWS Infrastructure
+
+This repository contains Terraform code to provision a basic AWS web infrastructure. It creates a VPC, two public subnets, an internet gateway, a route table, a security group, two EC2 instances, and an Application Load Balancer.
+
+## Architecture Overview
+
+- VPC with CIDR block `10.0.0.0/16`
+- Two public subnets in different availability zones
+- Internet gateway and public route table
+- Security group allowing SSH and HTTP traffic
+- Two EC2 web servers with user data scripts
+- Application Load Balancer (ALB) forwarding traffic to both instances
+
+## Project Files
+
+- `main.tf` – Main Terraform configuration for AWS resources
+- `variables.tf` – Input variables used by the configuration
+- `terraform.tfvars` – Values for the variables
+- `userdata.sh` – User data script for the first EC2 instance
+- `userdata1.sh` – User data script for the second EC2 instance
+
+## Prerequisites
+
+Before deploying, make sure you have:
+
+- Terraform installed
+- An AWS account
+- AWS credentials configured through the AWS console and available to the AWS CLI/Terraform
+- Appropriate IAM permissions to create VPC, EC2, and ELB resources
+
+## Getting Started
+
+1. Initialize Terraform:
+   ```bash
+   terraform init
+   ```
+
+2. Review the planned changes:
+   ```bash
+   terraform plan
+   ```
+
+3. Apply the infrastructure:
+   ```bash
+   terraform apply
+   ```
+
+4. When finished, destroy the resources:
+   ```bash
+   terraform destroy
+   ```
+
+## Notes
+
+- The EC2 instances use the AMI and instance type defined in `terraform.tfvars`.
+- The ALB listens on port 80 and forwards traffic to the target group attached to both web servers.
+- You may need to update the AMI ID in `terraform.tfvars` depending on your AWS region and account.
+
+
+
